@@ -1,0 +1,92 @@
+<div class="home-frame">
+    <div class="home-banner">
+        <div class="container inner">
+            <img class="hidden-sm hidden-xs" src="assets/images/trademarkCheck.png" width="400" height="400" />
+            <h1>TRADEMARK <span>CHECK</span>.</h1>
+            <h2>Have you filed a trademark recently? Would you like to see what the status is on your Trademark?</h2>
+            <p>This application speaks to the government's TSDR system to give you the most <strong>UP TO DATE</strong> status on your trademark! It provides you with important information pertaining to your application.  You will recieve data like Status, Filing date, Classifications, and most importantly, your <strong>Status</strong></p>
+            <div class="home-buttons">
+                <p>Wanna know who made this? </p><a href="https://github.com/Ethan3600" target="_blank" class="btn btn-lg btn-primary"><span class="icon icon-github2"></span> GitHub</a>
+            </div>
+        </div>
+    </div>
+    <div class="clearbanner"></div>
+    <div class="tutorials-title">
+        <div class="container">
+            TRADEMARK STATUS
+            <div class="hidden-xs share-buttons">
+                <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='15135403'></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <ul class="tutorials">
+            <li>
+                <p>Enter Your Serial Number</p>  <input type="text" data-ng-model="num" class="form-control" placeholder="{{ placeholder }}" data-ng-init="num = placeholder">
+                <button type="submit" data-ng-click="requestSerial(num)" class="btn btn-lg btn-primary">Search</button>
+            </li>
+            <div style="display: {{ display }}">
+                <li>
+                    <div class="number">1</div>
+                    <h3>Application Filing Date</h3>
+                    <p>{{trademarkData.ApplicationFilingDate[0]}}</p>
+                    <!-- <a href="{{tutorial.link}}" data-ng-class="{'disabled': (tutorial.link == '#')}" class="btn btn-lg btn-primary"><span class="icon icon-arrow-up-right5"></span> View</a> -->
+                    <div class="clearfix"></div>
+                </li>
+                <li>
+                    <div class="number">2</div>
+                    <h3>Mark Type</h3>
+                    <p>{{trademarkData.MarkType[0]}}</p>
+                    <!-- <a href="{{tutorial.link}}" data-ng-class="{'disabled': (tutorial.link == '#')}" class="btn btn-lg btn-primary"><span class="icon icon-arrow-up-right5"></span> View</a> -->
+                    <div class="clearfix"></div>
+                </li>
+                <li>
+                    <div class="number">3</div>
+                    <h3>Status</h3>
+                    <p>{{trademarkData.Status}}</p>
+                    <!-- <a href="{{tutorial.link}}" data-ng-class="{'disabled': (tutorial.link == '#')}" class="btn btn-lg btn-primary"><span class="icon icon-arrow-up-right5"></span> View</a> -->
+                    <div class="clearfix"></div>
+                </li>
+                <li>
+                    <div class="number">4</div>
+                    <h3>Renweal Date</h3>
+                    <p>{{trademarkData.RenewalDate}}</p>
+                    <!-- <a href="{{tutorial.link}}" data-ng-class="{'disabled': (tutorial.link == '#')}" class="btn btn-lg btn-primary"><span class="icon icon-arrow-up-right5"></span> View</a> -->
+                    <div class="clearfix"></div>
+                </li>
+                <li>
+                    <div class="number">5</div>
+                    <h3>Mark Literal Elements</h3>
+                    <p>{{trademarkData.MarkLiteralElements[0]}}</p>
+                    <!-- <a href="{{tutorial.link}}" data-ng-class="{'disabled': (tutorial.link == '#')}" class="btn btn-lg btn-primary"><span class="icon icon-arrow-up-right5"></span> View</a> -->
+                    <div class="clearfix"></div>
+                </li>
+                <li>
+                    <div class="number">6</div>
+                    <h3>Standard Character Claim</h3>
+                    <p>{{trademarkData.StandardCharacterClaim[0]}}</p>
+                    <!-- <a href="{{tutorial.link}}" data-ng-class="{'disabled': (tutorial.link == '#')}" class="btn btn-lg btn-primary"><span class="icon icon-arrow-up-right5"></span> View</a> -->
+                    <div class="clearfix"></div>
+                </li>
+                <li>
+                    <div class="number">7</div>
+                    <h3>Classes</h3>
+                    <div data-ng-repeat="classes in trademarkData.ClassNumber track by $index">
+                        <p>{{classes[0]}}</p>
+                        <p>{{trademarkData.ClassDescription[$index][0]}}</p>
+                        </br>
+                    </div>
+                    <!-- <a href="{{tutorial.link}}" data-ng-class="{'disabled': (tutorial.link == '#')}" class="btn btn-lg btn-primary"><span class="icon icon-arrow-up-right5"></span> View</a> -->
+                    <div class="clearfix"></div>
+                </li>
+                <!-- <li>
+                    <div class="number">8</div>
+                    <h3></h3>
+                    <p>{{trademark.description}}</p>
+                    <a href="{{tutorial.link}}" data-ng-class="{'disabled': (tutorial.link == '#')}" class="btn btn-lg btn-primary"><span class="icon icon-arrow-up-right5"></span> View</a>
+                    <div class="clearfix"></div>
+                </li> -->
+            </div>
+        </ul>
+    </div>
+</div>
