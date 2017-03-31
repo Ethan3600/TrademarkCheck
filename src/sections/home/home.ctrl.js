@@ -2,9 +2,6 @@
 angular
     .module('app.core')
     .controller('HomeController', function($scope, PageValues, $http) {
-        //Set page title and description
-        PageValues.title = "HOME";
-        PageValues.description = "Learn AngularJS using best practice real world examples.";
         //Setup view model object
         var vm = this;
         $scope.placeholder = 87132144;
